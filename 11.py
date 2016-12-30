@@ -65,8 +65,7 @@ def max_prod(grid):
 
 
 with open('11.txt') as f:
-    data = f.read()
-    data = data.split('\n')
+    data = f.read().split('\n')
 
     grid = []
     for line in data:
