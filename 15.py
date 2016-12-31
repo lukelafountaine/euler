@@ -17,9 +17,8 @@ def helper(m, n, cache):
     if (m, n) in cache:
         return cache[(m, n)]
 
-    else:
-        cache[(m, n)] = helper(m - 1, n, cache) + helper(m, n - 1, cache)
-        return cache[(m, n)]
+    cache[(m, n)] = helper(m - 1, n, cache) + helper(m, n - 1, cache)
+    return cache[(m, n)]
 
 
 print unique_paths(20, 20)
