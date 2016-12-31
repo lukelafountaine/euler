@@ -31,10 +31,7 @@ def fibonacci():
         yield prev
         prev, curr = curr, prev + curr
 
-
-fib_nums = fibonacci()
-
-for i, fib in enumerate(fib_nums):
+for i, fib in enumerate(fibonacci()):
 
     if fib >= 10 ** 999:
         print i + 1, fib

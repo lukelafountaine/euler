@@ -7,21 +7,7 @@
 #
 # How many circular primes are there below one million?
 
-
-def incremental_sieve(n):
-    composites = {}
-
-    for x in range(2, n):
-        if x not in composites:
-            yield x
-
-            composites[x * x] = [x]
-
-        else:
-            for prime in composites[x]:
-                composites.setdefault(x + prime, []).append(prime)
-
-            del composites[x]
+from common import incremental_sieve
 
 
 def is_circular(prime, primes):
@@ -36,9 +22,12 @@ def is_circular(prime, primes):
     return True
 
 
-primes = incremental_sieve(1000000)
 prime_set = set()
-for prime in primes:
+for i, prime in enumerate(incremental_sieve()):
+
+    if i == 1000000:
+        break
+
     prime_set.add(prime)
 
 count = 0
