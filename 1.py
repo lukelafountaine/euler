@@ -6,14 +6,9 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 
-def find_sum_of_multiples(n):
-    total = 0
-
-    for x in range(n):
-        if x % 3 == 0 or x % 5 == 0:
-            total += x
-
-    return total
+def sum_of_multiples(n, bound):
+    multiples = (bound - 1) / n
+    return n * ((multiples * (multiples + 1)) / 2)
 
 
-print find_sum_of_multiples(1000)
+print sum_of_multiples(3, 1000) + sum_of_multiples(5, 1000) - sum_of_multiples(15, 1000)
