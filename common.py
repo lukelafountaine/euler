@@ -1,5 +1,5 @@
 import itertools
-
+import random
 
 def incremental_sieve():
     composites = {}
@@ -22,3 +22,19 @@ def incremental_sieve():
                 composites.setdefault(next, []).append(prime)
 
             del composites[x]
+
+
+def is_prime(n):
+    if n < 2:
+        return False
+
+    prime = True
+
+    # fermat's little theorem
+    for _ in range(5):
+        a = random.randint(1, n)
+        if (a ** n) % n != (a % n):
+            prime = False
+            break
+
+    return prime
