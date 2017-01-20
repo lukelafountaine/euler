@@ -1,14 +1,14 @@
 #! /usr/bin/env python
 
-# In England the currency is made up of pound, £, and pence, p, and there are eight coins in general circulation:
+# In England the currency is made up of pound, and pence, p, and there are eight coins in general circulation:
 #
-# 1p, 2p, 5p, 10p, 20p, 50p, £1 (100p) and £2 (200p).
+# 1p, 2p, 5p, 10p, 20p, 50p, 1 pound (100p) and 2 pounds (200p).
 #
-# It is possible to make £2 in the following way:
+# It is possible to make 2 pound in the following way:
 #
-# 1×£1 + 1×50p + 2×20p + 1×5p + 1×2p + 3×1p
+# 1x1 pound + 1x50p + 2x20p + 1x5p + 1x2p + 3x1p
 #
-# How many different ways can £2 be made using any number of coins?
+# How many different ways can 2 pounds be made using any number of coins?
 
 
 def ways_make_change(n, denominations):

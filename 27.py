@@ -28,22 +28,7 @@
 # for the quadratic expression that produces the maximum number of primes for consecutive values of n,
 # starting with n = 0.
 
-import random
-
-
-def is_prime(n):
-    if n <= 0:
-        return False
-
-    prime = True
-
-    # fermat's little theorem
-    for _ in range(5):
-        a = random.randint(1, n)
-        if (a ** n) % n != (a % n):
-            prime = False
-
-    return prime
+from common import is_prime
 
 
 def num_of_primes(a, b):
@@ -53,6 +38,7 @@ def num_of_primes(a, b):
         n += 1
 
     return n
+
 
 most = 0
 coeffs = (0, 0)
